@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppListaSupermercado.View.FormularioCadastro">
+    <ContentPage.Content>
+
+        <Grid>
+
+
+            <Frame BorderColor="Gray"
+                    CornerRadius="0"
+                    HeightRequest="1000"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand"
+                    Margin="10"
+                    Padding="10">
+
+
+                <StackLayout>
+
+                    <Label Text="Lista de Produto" Style="{ StaticResource estilo_titulo}" />
+
+                    <Label Text=" Descrição:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                
+                <Entry x:Name="txt_descricao"
+                   Placeholder="Coloque qual produto vai ser comprado."></Entry>
+
+                
+                <Label Text=" Preço Estimado:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                
+                <Entry x:Name="txt_preço_estimado"
+                   Placeholder="Coloque qual o valor estimado do produto."></Entry>
+                
+
+                <Label Text=" Preço Real:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                
+                <Entry x:Name="txt_preco_pago"
+                   Placeholder="Coloque o preço que realmente foi pago."></Entry>
+                
+                
+
+                <Label Text=" Quantidade:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                <Entry x:Name="txt_quantidade"
+                       
+                   Placeholder="Qual a quantidade que é necessitada."></Entry>
+
+
+
+                <Button Text="Formulário de Produtos" Clicked="Btn_ListaProdutos" Style="{ StaticResource estilo_botao}" ></Button>
+
+                
+                 </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
