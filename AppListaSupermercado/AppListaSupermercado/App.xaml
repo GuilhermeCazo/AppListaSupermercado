@@ -22,6 +22,7 @@
 
             <Style x:Key="estilo_titulo" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
                 <Setter Property="FontAttributes" Value="Bold"></Setter>
                 <Setter Property="FontSize" Value="30"></Setter>
                 <Setter Property="Margin" Value="10"></Setter>

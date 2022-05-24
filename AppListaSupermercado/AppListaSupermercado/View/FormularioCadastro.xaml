@@ -19,30 +19,38 @@
                 <StackLayout>
 
                     <Label Text="Lista de Produto" Style="{ StaticResource estilo_titulo}" />
-
+                    
+                    
+                    
+                    <!-- Descrição -->
                     <Label Text=" Descrição:" HorizontalOptions="StartAndExpand" FontSize="20"/>
                 
-                <Entry x:Name="txt_descricao"
-                   Placeholder="Coloque qual produto vai ser comprado."></Entry>
+                <Entry x:Name="txt_descricao" Placeholder="Coloque qual produto vai ser comprado."></Entry>
 
-                
-                <Label Text=" Preço Estimado:" HorizontalOptions="StartAndExpand" FontSize="20"/>
-                
-                <Entry x:Name="txt_preço_estimado"
-                   Placeholder="Coloque qual o valor estimado do produto."></Entry>
-                
 
-                <Label Text=" Preço Real:" HorizontalOptions="StartAndExpand" FontSize="20"/>
-                
-                <Entry x:Name="txt_preco_pago"
-                   Placeholder="Coloque o preço que realmente foi pago."></Entry>
-                
-                
 
-                <Label Text=" Quantidade:" HorizontalOptions="StartAndExpand" FontSize="20"/>
-                <Entry x:Name="txt_quantidade"
-                       
-                   Placeholder="Qual a quantidade que é necessitada."></Entry>
+
+                    <!-- Preço Estimado -->
+                    <Label Text=" Preço Estimado:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                
+                <Entry x:Name="txt_preço_estimado" Placeholder="Coloque qual o valor estimado do produto."
+                       Keyboard="Numeric"></Entry>
+
+
+
+
+                    <!-- Preço Real -->
+                    <Label Text=" Preço Real:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+
+                    <Entry x:Name="txt_preco_pago" Placeholder="Coloque o preço que realmente foi pago."
+                       Keyboard="Numeric"></Entry>
+
+
+
+
+                    <!-- Preço Quantidade -->
+                    <Label Text=" Quantidade:" HorizontalOptions="StartAndExpand" FontSize="20" />
+                <Entry x:Name="txt_quantidade" Placeholder="Qual a quantidade que é necessitada."></Entry>
 
 
 
@@ -50,6 +58,8 @@
 
                 
                  </StackLayout>
+                
+                
             </Frame>
         </Grid>
     </ContentPage.Content>
