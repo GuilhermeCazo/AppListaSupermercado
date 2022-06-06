@@ -50,7 +50,8 @@
 
                     <!-- Preço Quantidade -->
                     <Label Text=" Quantidade:" HorizontalOptions="StartAndExpand" FontSize="20" />
-                <Entry x:Name="txt_quantidade" Placeholder="Qual a quantidade que é necessitada."></Entry>
+                <Entry x:Name="txt_quantidade" Placeholder="Qual a quantidade que é necessitada." 
+                       Keyboard="Numeric"></Entry>
 
 
 
