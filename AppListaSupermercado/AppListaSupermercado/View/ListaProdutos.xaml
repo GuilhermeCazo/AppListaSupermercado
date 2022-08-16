@@ -8,18 +8,27 @@
         <ContentPage.Content>
         <ScrollView>
             <Grid>
-                  <StackLayout>
 
-                    <Label Text="Lista de Produto" HorizontalOptions="CenterAndExpand" FontSize="30" Style="{ StaticResource estilo_titulo}" />
+                
+                <StackLayout>
+
+                    <StackLayout>
+
+                        <Label Text="Lista de Produto" HorizontalOptions="CenterAndExpand" FontSize="30" Style="{ StaticResource estilo_titulo}" />
+
+                        <SearchBar Margin="-5, 0, 15, 0" x:Name="busca">
+                        </SearchBar>
+
+                    </StackLayout>
 
 
+                    <Button Text="Formulário de Produtos" Clicked="Btn_FormCadastro" Style="{ StaticResource estilo_botao}" ></Button>
 
-                         <Button Text="Formulário de Produtos" Clicked="Btn_FormCadastro" Style="{ StaticResource estilo_botao}" > </Button>
-                      
-                      
-                      
-                  </StackLayout>
-             </Grid>
+                </StackLayout>
+
+                
+            </Grid>
         </ScrollView>
     </ContentPage.Content>
+
 </ContentPage>

@@ -6,7 +6,6 @@
 
         <Grid>
            
-            
 
 
             <Frame BorderColor="Gray"
@@ -20,6 +19,8 @@
 
                 <StackLayout>
 
+                   
+
                     <Label Text="Lista de Produto" Style="{ StaticResource estilo_titulo}" />
                     
                     
@@ -32,10 +33,10 @@
 
 
 
-                    <!-- Preço -->
-                    <Label Text=" Preço:" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Gray"/>
+                    <!-- Preço Unico-->
+                    <Label Text=" Preço Unico:" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Gray"/>
                 
-                <Entry x:Name="txt_preço" Placeholder="Coloque qual o valor estimado do produto."
+                <Entry x:Name="txt_preço" Placeholder="Coloque qual o preço a ser pago para o produto."
                        Keyboard="Numeric"></Entry>
 
 
