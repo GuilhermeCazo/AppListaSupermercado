@@ -5,6 +5,8 @@
     <ContentPage.Content>
 
         <Grid>
+           
+            
 
 
             <Frame BorderColor="Gray"
@@ -23,42 +25,39 @@
                     
                     
                     <!-- Descrição -->
-                    <Label Text=" Descrição:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                    <Label Text=" Descrição:" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Gray"/>
                 
                 <Entry x:Name="txt_descricao" Placeholder="Coloque qual produto vai ser comprado."></Entry>
 
 
 
 
-                    <!-- Preço Estimado -->
-                    <Label Text=" Preço Estimado:" HorizontalOptions="StartAndExpand" FontSize="20"/>
+                    <!-- Preço -->
+                    <Label Text=" Preço:" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Gray"/>
                 
-                <Entry x:Name="txt_preço_estimado" Placeholder="Coloque qual o valor estimado do produto."
+                <Entry x:Name="txt_preço" Placeholder="Coloque qual o valor estimado do produto."
                        Keyboard="Numeric"></Entry>
-
-
-
-
-                    <!-- Preço Real -->
-                    <Label Text=" Preço Real:" HorizontalOptions="StartAndExpand" FontSize="20"/>
-
-                    <Entry x:Name="txt_preco_pago" Placeholder="Coloque o preço que realmente foi pago."
-                       Keyboard="Numeric"></Entry>
-
 
 
 
                     <!-- Preço Quantidade -->
-                    <Label Text=" Quantidade:" HorizontalOptions="StartAndExpand" FontSize="20" />
+                    <Label Text=" Quantidade:" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Gray" />
                 <Entry x:Name="txt_quantidade" Placeholder="Qual a quantidade que é necessitada." 
                        Keyboard="Numeric"></Entry>
 
+                    
+                    <!-- Preço Real 
+                     <Label Text=" Preço Real:" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Gray"/>
+
+                    <Entry x:Name="txt_preco_pago" Placeholder="Coloque o preço que realmente foi pago."
+                       Keyboard="Numeric"></Entry> 
+                    
+                    -->
+
+                    <Button Text="Formulário de Produtos" Clicked="Btn_ListaProdutos" Style="{ StaticResource estilo_botao}" ></Button>
 
 
-                <Button Text="Formulário de Produtos" Clicked="Btn_ListaProdutos" Style="{ StaticResource estilo_botao}" ></Button>
-
-                
-                 </StackLayout>
+                </StackLayout>
                 
                 
             </Frame>
