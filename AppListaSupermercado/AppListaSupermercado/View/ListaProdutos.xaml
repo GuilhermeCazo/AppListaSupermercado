@@ -3,32 +3,101 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppListaSupermercado.View.ListaProdutos">
 
-     
 
-        <ContentPage.Content>
-        <ScrollView>
-            <Grid>
 
-                
+    <ContentPage.Content>
+
+        <!-- O botão e a barra de pesquisa -->
+        <StackLayout>
+            
+            <Frame BorderColor="Gray"
+                    CornerRadius="0"
+                    HeightRequest="200"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Start"
+                    Margin="10"
+                    Padding="10">
+
                 <StackLayout>
 
-                    <StackLayout>
+                    <Label Text="Lista de Produto" HorizontalOptions="CenterAndExpand" FontSize="30" Style="{ StaticResource estilo_titulo}" />
 
-                        <Label Text="Lista de Produto" HorizontalOptions="CenterAndExpand" FontSize="30" Style="{ StaticResource estilo_titulo}" />
-
-                        <SearchBar Margin="-5, 0, 15, 0" x:Name="busca">
-                        </SearchBar>
-
-                    </StackLayout>
-
+                    <SearchBar Margin="-5, 0, 15, 0" x:Name="busca">
+                    </SearchBar>
 
                     <Button Text="Formulário de Produtos" Clicked="Btn_FormCadastro" Style="{ StaticResource estilo_botao}" ></Button>
 
                 </StackLayout>
 
+            </Frame>
+            
+            <!-- List View (onde vai aparecer os dados -->
+            <Frame BorderColor="Gray"
+                    CornerRadius="0"
+                    HeightRequest="1000"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Start"
+                    Margin="20"
+                    Padding="7">
+
+                <RefreshView x:Name="ref_carregando" IsRefreshing="False">
+                    <ListView x:Name="lst_produtos" ItemSelected="lst_produtos_ItemSelected">
+                        <ListView.Header>
+
+                            <Grid>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Column="0" Grid.Row="0">ID:             </Label>
+                                <Label Grid.Column="1" Grid.Row="0">Descrição:      </Label>
+                                <Label Grid.Column="2" Grid.Row="0">Preço Único:    </Label>
+                                <Label Grid.Column="3" Grid.Row="0">Quantidade:     </Label>
+                                <Label Grid.Column="4" Grid.Row="0">Preço Total:    </Label>
+
+                            </Grid>
+                        </ListView.Header>
+
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    
+                                   <!-- <ViewCell.ContextActions>
+                                        <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
+                                    </ViewCell.ContextActions> -->
+
+                                    <Grid RowDefinitions="Auto"
+                                      ColumnDefinitions="20, Auto, Auto, Auto, Auto">
+                                        
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Descricao}" />
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Preco_Unico}" />
+                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding Quantidade}" />
+                                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding Preco_Total}" />
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                        
+                    </ListView>
                 
-            </Grid>
-        </ScrollView>
+                
+                </RefreshView>
+            </Frame>
+            
+            
+            
+        </StackLayout>
     </ContentPage.Content>
 
 </ContentPage>

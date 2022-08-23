@@ -9,10 +9,12 @@ namespace AppListaSupermercado.Model
     public class Produto
     {
         [PrimaryKey, AutoIncrement]
-        public string Id { get; set; }
-        public string NomeProduto { get; set; }
-        public double Quantidade { get; set; }
+        public int Id { get; set; }
+        public string Descricao { get; set; }
         public double Preco_Unico { get; set; }
-        
+        public double Quantidade { get; set; }
+        public double Preco_Total { get; set; }
+
+
     }
 }

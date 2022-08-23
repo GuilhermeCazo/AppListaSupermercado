@@ -36,7 +36,7 @@
                     <!-- Preço Unico-->
                     <Label Text=" Preço Unico:" HorizontalOptions="StartAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Gray"/>
                 
-                <Entry x:Name="txt_preço" Placeholder="Coloque qual o preço a ser pago para o produto."
+                <Entry x:Name="txt_preco_unico" Placeholder="Coloque qual o preço a ser pago para o produto."
                        Keyboard="Numeric"></Entry>
 
 
