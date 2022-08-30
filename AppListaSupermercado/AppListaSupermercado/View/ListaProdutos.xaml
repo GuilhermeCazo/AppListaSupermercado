@@ -22,7 +22,7 @@
 
                     <Label Text="Lista de Produto" HorizontalOptions="CenterAndExpand" FontSize="30" Style="{ StaticResource estilo_titulo}" />
 
-                    <SearchBar Margin="-5, 0, 15, 0" x:Name="busca">
+                    <SearchBar Margin="-5, 0, 15, 0"  Placeholder="Qual produto?" TextChanged="txt_busca_TextChanged" >
                     </SearchBar>
 
                     <Button Text="Formulário de Produtos" Clicked="Btn_FormCadastro" Style="{ StaticResource estilo_botao}" ></Button>
@@ -41,7 +41,7 @@
                     Padding="7">
 
                 <RefreshView x:Name="ref_carregando" IsRefreshing="False">
-                    <ListView x:Name="lst_produtos" ItemSelected="lst_produtos_ItemSelected">
+                    <ListView x:Name="lst_produtos" >
                         <ListView.Header>
 
                             <Grid>
@@ -72,12 +72,12 @@
                             <DataTemplate>
                                 <ViewCell>
                                     
-                                   <!-- <ViewCell.ContextActions>
+                                    <ViewCell.ContextActions>
                                         <MenuItem Text="Remover" Clicked="MenuItem_Clicked" />
-                                    </ViewCell.ContextActions> -->
+                                    </ViewCell.ContextActions> 
 
                                     <Grid RowDefinitions="Auto"
-                                      ColumnDefinitions="20, Auto, Auto, Auto, Auto">
+                                      ColumnDefinitions="20, *, *, *, *">
                                         
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding Id}" />
                                         <Label Grid.Row="0" Grid.Column="1" Text="{Binding Descricao}" />
