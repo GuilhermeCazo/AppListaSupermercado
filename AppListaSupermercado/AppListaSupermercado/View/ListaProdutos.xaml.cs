@@ -30,7 +30,7 @@ namespace AppListaSupermercado.View
 
         }
 
-        
+
 
         /*
          private void ToolbarItem_Clicked_Novo(object sender, EventArgs e)
@@ -45,21 +45,14 @@ namespace AppListaSupermercado.View
            }
           }
 
-
+        */
         //===============================================================//
 
-           O VALOR TOTAL, MAS VOU TER QUE FAZER DIFERENTE
+        // O VALOR TOTAL, MAS VOU TER QUE FAZER DIFERENTE
         
-            private void ToolbarItem_Clicked_Somar(object sender, EventArgs e)
-              {
-        
-         double soma = lista_produtos.Sum(i => i.Preco_Unico * i.Quantidade)
-          string msg = "O total da compra é" + soma;
-        
-         DisplayAlert("Ops", msg, "ok");
-         }
+           
 
-        */
+        
 
 
         protected override void OnAppearing()
@@ -130,16 +123,16 @@ namespace AppListaSupermercado.View
 
       //editar (vejo bunitinho depois, não sei se da certo pq tenho que fazer o arquivo bonitinho
 
-        /*
+       
         private void lst_produtos_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             
-            Navigation.PushAsync(new EditarProduto
+            Navigation.PushAsync(new Edicao
             {
                 BindingContext = (Produto)e.SelectedItem
             });
         }
-        */
+        
 
         private void Btn_FormCadastro(object sender, EventArgs e)
         {

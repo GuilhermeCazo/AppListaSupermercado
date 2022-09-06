@@ -10,6 +10,15 @@
 
         <ResourceDictionary>
 
+            <Style x:Key="estilo_botao_lado" TargetType="Button">
+                <Setter Property="HorizontalOptions" Value="Start"></Setter>
+                <Setter Property="BackgroundColor" Value="#87CEFA"></Setter>
+                <Setter Property="TextColor" Value="Black"></Setter>
+                <Setter Property="FontAttributes" Value="Bold"></Setter>
+                <Setter Property="Margin" Value="10"></Setter>
+
+            </Style>
+
             <Style x:Key="estilo_botao" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="Center"></Setter>
                 <Setter Property="BackgroundColor" Value="#87CEFA"></Setter>

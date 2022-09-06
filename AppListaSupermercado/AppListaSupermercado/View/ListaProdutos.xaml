@@ -41,7 +41,7 @@
                     Padding="7">
 
                 <RefreshView x:Name="ref_carregando" IsRefreshing="False">
-                    <ListView x:Name="lst_produtos" >
+                    <ListView x:Name="lst_produtos" ItemSelected="lst_produtos_ItemSelected">
                         <ListView.Header>
 
                             <Grid>

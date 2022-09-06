@@ -55,7 +55,9 @@
                     
                     -->
 
-                    <Button Text="Formulário de Produtos" Clicked="Btn_ListaProdutos" Style="{ StaticResource estilo_botao}" ></Button>
+                    <Button Text="Formulário de Produtos" Clicked="Btn_ListaProdutos" Style="{ StaticResource estilo_botao_lado}"
+                                   
+                    ></Button>
 
 
                 </StackLayout>

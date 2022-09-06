@@ -31,8 +31,18 @@ namespace AppListaSupermercado.View
                     Descricao = txt_descricao.Text,
                     Preco_Unico = Convert.ToDouble(txt_preco_unico.Text),
                     Quantidade = Convert.ToDouble(txt_quantidade.Text),
+
+
                 };
 
+                /**
+                 * 
+                 * teste falho )':
+                 * 
+                 double Preco_Total = lista_produtos.Sum(i => i.Preco_Unico * i.Quantidade)
+          
+                */
+                
 
                 /**
                  * Chamando o método insert da SQLiteDatabaseHelper para fazer a inseração do
@@ -58,6 +68,11 @@ namespace AppListaSupermercado.View
                 await DisplayAlert("Ops", ex.Message, "OK");
             }
         }
+
+       
+
+            
+        
 
         //botão de ir pra lista
         private void Btn_ListaProdutos(object sender, EventArgs e)
